@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ClientWrapper from "./components/client-wrapper";
+import  SessionProvider  from "./components/client-sessionProvider";
+import ClientProviders from "./components/client-sessionProvider";
+import Header from "./components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClientProviders>
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <SessionProvider> */}
+          <ClientWrapper>
+            <Header />
+            {children}
+          </ClientWrapper>
+        {/* </SessionProvider> */}
+      </body>
     </html>
+    </ClientProviders>
   );
 }
