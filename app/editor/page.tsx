@@ -1,11 +1,36 @@
+"use client";
+import { useState } from "react";
 import ProtectedRoute from "../components/protectRoute";
+import RenderTabs from "../components/renderTabs";
 
-const EditorDashboard = () => {
+const AdminDashboard = () => {
+  const [activeTab, setActiveTab] = useState("crud");
   return (
-    <ProtectedRoute roles={['editor']}>
-      <div>Editor Dashboard</div>
+    <ProtectedRoute roles={["editor"]}>
+      <div className="pt-12">
+        <div className="flex flex-row justify-center items-center gap-4 md:space-x-9">
+          <button
+            className="border border-gray-200 rounded-lg px-2 py-1 shadow-xl text-[12px] md:text-[16px]"
+            onClick={() => {
+              setActiveTab("crud");
+            }}
+          >
+            Edit Data
+          </button>
+          <button
+            className="border border-gray-200 rounded-lg px-2 py-1 shadow-xl text-[12px] md:text-[16px]"
+            onClick={() => {
+              setActiveTab("add");
+            }}
+          >
+            Add an Item
+          </button>
+        </div>
+        <RenderTabs activeTab={activeTab} />
+      </div>
     </ProtectedRoute>
   );
 };
 
-export default EditorDashboard;
+export default AdminDashboard;
+

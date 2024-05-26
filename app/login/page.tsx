@@ -25,7 +25,7 @@ export default function page() {
   }, []);
 
   return (
-    <div className="h-screen bg-gray-300">
+    <div className="h-screen bg-gray-300 pt-6 px-5">
       <LoginForm />
       {/* {allProducts.map((product, i) => (
         <div>

@@ -74,7 +74,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, setFilters, brands, categori
   }, [allProducts, filters, searchTerm]);
 
   return (
-    <div className="flex justify-center my-4 space-x-4">
+    <div className="flex flex-col md:flex-row justify-center my-4 gap-4">
       <select name="category" value={filters.category} onChange={handleFilterChange} className="px-4 py-2 border rounded-lg">
         <option value="">All Categories</option>
         {categories.map(category => (

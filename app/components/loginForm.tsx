@@ -69,8 +69,9 @@ export default function LoginForm() {
 
   }, [toast]);
 
+  // absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
   return (
-    <div className="w-[30%] bg-white py-4 rounded-lg shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div className="w-[100%] md:w-[50%] lg:w-[30%] bg-white py-4 rounded-lg shadow-lg mx-auto">
       <h1 className="text-blue-500 font-bold text-[20px] flex flex-row justify-center">
         Login to your account
       </h1>
@@ -121,8 +122,8 @@ export default function LoginForm() {
                 <path
                   d="M19 10C19 11.3261 18.4732 12.5979 17.5355 13.5355C16.5979 14.4732 15.3261 15 14 15M9 10C9 8.67392 9.52678 7.40215 10.4645 6.46447C11.4021 5.52678 12.6739 5 14 5M11 18.654C11.9837 18.8822 12.9901 18.9982 14 19C21.18 19 27 13 27 10C27 8.664 25.845 6.732 23.929 5M17.5 1.47C16.359 1.16065 15.1822 1.00262 14 1C6.82 1 1 7 1 10C1 11.32 2.127 13.22 4 14.935M5 19L23 1"
                   stroke="#3B82F6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             )}
