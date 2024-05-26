@@ -41,7 +41,7 @@ export default function TableData() {
   return (
     <div className='mt-12 px-6 w-max-full'>
       <table {...getTableProps()} className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-blue-500">
+        <thead className="bg-blue-500 dark:bg-teal-500">
           {headerGroups.map((headerGroup: any) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column: any) => (
@@ -58,7 +58,7 @@ export default function TableData() {
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()} className="bg-white divide-y divide-gray-200">
+        <tbody {...getTableBodyProps()} className="bg-white dark:bg-[#121212] divide-y divide-gray-300 dark:divide-yellow-600">
           {rows.map((row: any) => {
             prepareRow(row);
             return (

@@ -3,6 +3,7 @@ import { fetchProducts } from "@/services/products";
 import { SingleProduct } from "@/types/types";
 import React, { useState, useEffect } from "react";
 import LoginForm from "../components/loginForm";
+import { ThemeProvider } from "next-themes";
 
 export default function page() {
   const [allProducts, setAllProducts] = useState<SingleProduct[]>([]);
@@ -25,7 +26,7 @@ export default function page() {
   }, []);
 
   return (
-    <div className="h-screen bg-gray-300 pt-6 px-5">
+    <div className="h-screen bg-gray-300 dark:bg-[#121212] pt-6 px-5">
       <LoginForm />
       {/* {allProducts.map((product, i) => (
         <div>

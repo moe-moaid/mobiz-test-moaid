@@ -91,11 +91,11 @@ export default function AddItem() {
         ) : (
           <ToastFail failMessage={toast.message} />
         ))}
-      <div className="bg-gray-200 p-6 rounded-lg shadow-lg w-full max-w-md">
+      <div className="bg-gray-200 dark:bg-teal-500 p-6 rounded-lg shadow-lg w-full max-w-md">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 dark:text-teal-200 text-sm font-medium mb-2"
               htmlFor="title"
             >
               Title
@@ -105,13 +105,13 @@ export default function AddItem() {
               name="title"
               value={formData.title}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               required
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 dark:text-teal-200 text-sm font-medium mb-2"
               htmlFor="description"
             >
               Description
@@ -121,13 +121,13 @@ export default function AddItem() {
               name="description"
               value={formData.description}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               required
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 dark:text-teal-200 text-sm font-medium mb-2"
               htmlFor="price"
             >
               Price
@@ -137,14 +137,14 @@ export default function AddItem() {
               name="price"
               value={formData.price}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               min={0}
               required
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 dark:text-teal-200 text-sm font-medium mb-2"
               htmlFor="discountPercentage"
             >
               Discount Percentage
@@ -154,14 +154,14 @@ export default function AddItem() {
               name="discountPercentage"
               value={formData.discountPercentage}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               min={0}
               required
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 dark:text-teal-200 text-sm font-medium mb-2"
               htmlFor="discountPercentage"
             >
               Stock
@@ -171,14 +171,14 @@ export default function AddItem() {
               name="stock"
               value={formData.stock}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               min={0}
               required
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 dark:text-teal-200 text-sm font-medium mb-2"
               htmlFor="discountPercentage"
             >
               Rating
@@ -188,14 +188,14 @@ export default function AddItem() {
               name="rating"
               value={formData.rating}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               min={0}
               required
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 dark:text-teal-200 text-sm font-medium mb-2"
               htmlFor="category"
             >
               Category
@@ -205,13 +205,13 @@ export default function AddItem() {
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
+            className="w-full bg-blue-500 dark:bg-violet-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
           >
             <Loading text="Add Product" />
           </button>

@@ -5,6 +5,7 @@ import ClientWrapper from "./components/client-wrapper";
 import SessionProvider from "./components/client-sessionProvider";
 import ClientProviders from "./components/client-sessionProvider";
 import Header from "./components/header";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +26,10 @@ export default function RootLayout({
         <body className={inter.className}>
           {/* <SessionProvider> */}
           <ClientWrapper>
-            <Header />
-            {children}
+            <ThemeProvider enableSystem={true} attribute="class">
+              <Header />
+              {children}
+            </ThemeProvider>
           </ClientWrapper>
           {/* </SessionProvider> */}
         </body>

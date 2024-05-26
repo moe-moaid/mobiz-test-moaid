@@ -38,16 +38,16 @@ export default function DetailedCard({ productId }: Props) {
   return (
     <>
       {loading && (
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping">
+        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping dark:text-white">
           Loading
         </h1>
       )}
       {!loading && (
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%]">
-          <div className="flex flex-col justify-center items-center bg-gray-200 w-1/3 mx-auto p-4 rounded-lg shadow-lg">
+          <div className="flex flex-col justify-center items-center bg-gray-200 dark:bg-teal-500 w-1/3 mx-auto p-4 rounded-lg shadow-lg">
             {product?.images?.[0] && (
               <Image
-                className="border border-gray-400 rounded-lg"
+                className="border border-gray-400 dark:border-yellow-500 rounded-lg"
                 src={product.images[0]}
                 width={300}
                 height={300}
@@ -56,7 +56,7 @@ export default function DetailedCard({ productId }: Props) {
             )}
             <div className="flex flex-row justify-between w-full mt-8 mb-4 items-center">
               <h1 className="font-semibold">{product?.title}</h1>
-              <p className="bg-red-400 px-2 py-1 rounded-full text-white font-semi-bold">
+              <p className="bg-red-400 dark:bg-violet-500 px-2 py-1 rounded-full text-white font-semi-bold">
                 Save {product?.discountPercentage}%
               </p>
             </div>

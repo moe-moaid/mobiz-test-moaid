@@ -71,8 +71,8 @@ export default function LoginForm() {
 
   // absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
   return (
-    <div className="w-[100%] md:w-[50%] lg:w-[30%] bg-white py-4 rounded-lg shadow-lg mx-auto">
-      <h1 className="text-blue-500 font-bold text-[20px] flex flex-row justify-center">
+    <div className="w-[100%] md:w-[50%] lg:w-[30%] bg-white dark:bg-teal-500 py-4 rounded-lg shadow-lg mx-auto">
+      <h1 className="text-blue-500 dark:text-teal-200 font-bold text-[20px] flex flex-row justify-center">
         Login to your account
       </h1>
       {
@@ -86,7 +86,7 @@ export default function LoginForm() {
             Email
           </label>
           <input
-            className="px-2 py-1 bg-transparent border border-blue-500 rounded-lg text-black stroke-none outline-none"
+            className="px-2 py-1 bg-transparent border border-blue-500 dark:border-yellow-600 rounded-lg text-black dark:text-teal-200 stroke-none outline-none"
             type="email"
             name="email"
             placeholder="Enter your email"
@@ -100,9 +100,9 @@ export default function LoginForm() {
           <label className="font-thin" htmlFor="password">
             Password
           </label>
-          <div className="flex flex-row justify-between items-center border border-blue-500 px-2 py-1 rounded-lg">
+          <div className="flex flex-row justify-between items-center border border-blue-500 dark:border-yellow-600 px-2 py-1 rounded-lg">
             <input
-              className=" bg-transparent text-black stroke-none outline-none"
+              className=" bg-transparent text-black dark:text-teal-200 stroke-none outline-none"
               type={!showPass ? 'password' : 'text'}
               name="password"
               placeholder="Enter your password"
@@ -112,6 +112,7 @@ export default function LoginForm() {
             />
             {!showPass && (
               <svg
+              className="hover:cursor-pointer"
                 width="28"
                 height="20"
                 viewBox="0 0 28 20"
@@ -129,6 +130,7 @@ export default function LoginForm() {
             )}
             {showPass && (
               <svg
+                className="hover:cursor-pointer"
                 onClick={controlPass}
                 width="26"
                 height="18"
@@ -153,15 +155,15 @@ export default function LoginForm() {
           </div>
         </div>
         {error && (<p className="text-red-500 text-[14px] font-normal">Incorrect credentials</p>)}
-        <button className="bg-blue-500 px-12 py-2 rounded-full text-white font-semibold mt-12 animate-pulse" disabled={ loading }>
+        <button className="bg-blue-500 dark:bg-violet-500 px-12 py-2 rounded-full text-white font-semibold mt-12 animate-pulse" disabled={ loading }>
           <Loading text="Login"/>
         </button>
       </form>
-      <p className="px-2 text-red-500 font-medium">Login Instructions*</p>
-      <p className="px-2 text-green-500 font-normal text-[14px]">{`- To login as admin use: ali@gmail.com, 123 =>  admin Dashboard`}</p>
-      <p className="px-2 text-yellow-500 font-normal text-[14px]">{`- To login as editor use: usama@gmail.com, 123 => editor Dashboard`}</p>
-      <p className="px-2 text-violet-500 font-normal text-[14px]">{`- To login as viewer use: asad@gmail.com, 123 => home page`}</p>
-      <p className="px-2 text-red-500 font-normal text-[14px]">To use Filtering and searching on homePage, you have to login (part of optional Tasks)</p>
+      <p className="px-2 text-red-500 dark:text-teal-200 font-medium">Login Instructions*</p>
+      <p className="px-2 text-green-500 dark:text-teal-200 font-normal text-[14px]">{`- To login as admin use: ali@gmail.com, 123 =>  admin Dashboard`}</p>
+      <p className="px-2 text-yellow-500 dark:text-teal-200 font-normal text-[14px]">{`- To login as editor use: usama@gmail.com, 123 => editor Dashboard`}</p>
+      <p className="px-2 text-violet-500 dark:text-teal-200 font-normal text-[14px]">{`- To login as viewer use: asad@gmail.com, 123 => home page`}</p>
+      <p className="px-2 text-red-500 dark:text-teal-200 font-normal text-[14px]">To use Filtering and searching on homePage, you have to login (part of optional Tasks)</p>
     </div>
   );
 }

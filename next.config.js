@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    domains: ['cdn.dummyjson.com', 'picsum.photos'],
+    domains: ['cdn.dummyjson.com'],
   },
 };
 
