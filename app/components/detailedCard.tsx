@@ -41,8 +41,8 @@ export default function DetailedCard({ productId }: Props) {
         </h1>
       )}
       {!loading && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%]">
-          <div className="flex flex-col justify-center items-center bg-gray-200 dark:bg-teal-500 w-1/3 mx-auto p-4 rounded-lg shadow-lg">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] px-4">
+          <div className="flex flex-col justify-center items-center bg-gray-200 dark:bg-teal-500 w-full md:w-1/2 lg:w-1/3 mx-auto p-4 rounded-lg shadow-lg">
             {product?.images?.[0] && (
               <Image
                 className="border border-gray-400 dark:border-yellow-500 rounded-lg"
