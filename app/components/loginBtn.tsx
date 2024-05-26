@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 
 export default function LoginBtn() {
   const { data: session, status } = useSession();
-  console.log(session);
   
   const path = usePathname();
   return (

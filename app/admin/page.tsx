@@ -15,7 +15,7 @@ const AdminDashboard = () => {
               setActiveTab("table");
             }}
           >
-            Table Dtata
+            Table Data
           </button>
           <button
             className={`${activeTab === 'chart' ? 'bg-blue-500 text-white dark:bg-violet-500' : ''} border border-gray-200 dark:border-none rounded-lg px-2 py-1 shadow-xl text-[12px] md:text-[16px]`}
@@ -23,7 +23,7 @@ const AdminDashboard = () => {
               setActiveTab("chart");
             }}
           >
-            Chart Dtata
+            Chart Data
           </button>
           <button
             className={`${activeTab === 'matrix' ? 'bg-blue-500 text-white dark:bg-violet-500' : ''} border border-gray-200 dark:border-none rounded-lg px-2 py-1 shadow-xl text-[12px] md:text-[16px]`}
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
               setActiveTab("matrix");
             }}
           >
-            Matrix Dtata
+            Matrix Data
           </button>
           <button
             className={`${activeTab === 'crud' ? 'bg-blue-500 text-white dark:bg-violet-500' : ''} border border-gray-200 dark:border-none rounded-lg px-2 py-1 shadow-xl text-[12px] md:text-[16px]`}

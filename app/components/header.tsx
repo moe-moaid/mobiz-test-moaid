@@ -6,11 +6,11 @@ import { useSession } from "next-auth/react";
 import LoginBtn from "./loginBtn";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-const Header = () => {
+function Header() {
   const path = usePathname();
   const { data: session, status } = useSession();
 
-  const getLinkClass = (path: string) => {
+  function GetLinkClass(path: string){
     return path === usePathname() ? "bg-blue-500 text-white" : "";
   };
   const { theme, setTheme } = useTheme();
@@ -35,7 +35,7 @@ const Header = () => {
       <div className="flex flex-row justify-center items-center space-x-4 bg-transparent py-5">
         <Link href={"/"}>
           <button
-            className={`border border-gray-300 rounded-lg px-3 py-2 ${getLinkClass(
+            className={`border border-gray-300 rounded-lg px-3 py-2 ${GetLinkClass(
               "/"
             )}`}
           >
@@ -53,7 +53,7 @@ const Header = () => {
           ) : (
             <Link href={`/${session.user.role}`}>
               <button
-                className={`border border-gray-300 rounded-lg px-3 py-2 ${getLinkClass(
+                className={`border border-gray-300 rounded-lg px-3 py-2 ${GetLinkClass(
                   `/${session.user.role}`
                 )}`}
               >

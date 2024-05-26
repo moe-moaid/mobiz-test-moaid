@@ -33,8 +33,6 @@ export default function DetailedCard({ productId }: Props) {
     getProduct();
   }, []);
 
-  console.log(loading);
-
   return (
     <>
       {loading && (
