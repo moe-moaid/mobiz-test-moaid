@@ -10,7 +10,7 @@ type Props = {
 
 export default function RenderTabs({ activeTab }: Props) {
   return (
-    <div>
+    <div className='px-5'>
         {activeTab === 'table' && <TableData />}
         {activeTab === 'chart' && <ChartData />}
         {activeTab === 'matrix' && <MatrixData />}

@@ -139,6 +139,7 @@ export default function AddItem() {
               onChange={handleChange}
               className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               min={0}
+              step='0.01'
               required
             />
           </div>
@@ -156,6 +157,7 @@ export default function AddItem() {
               onChange={handleChange}
               className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               min={0}
+              step='0.01'
               required
             />
           </div>
@@ -190,6 +192,7 @@ export default function AddItem() {
               onChange={handleChange}
               className="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-transparent dark:border-yellow-600 border rounded-lg focus:outline-none"
               min={0}
+              step="0.1"
               required
             />
           </div>

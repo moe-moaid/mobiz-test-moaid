@@ -19,7 +19,7 @@ export default function MatrixData() {
   }, [allProducts]);
 
   return (
-    <div className="p-5 border border-gray-200 rounded-xl shadow-xl mt-12 w-[20%] mx-auto">
+    <div className="p-5 border border-gray-200 rounded-xl shadow-xl mt-12 w-full md:w-[40%] lg:w-[25%] mx-auto">
       <h2 className="text-lg font-semibold">Key Metrics</h2>
       <div className="mt-4">
         <p className="text-md">Average Rating of all Products:</p>
